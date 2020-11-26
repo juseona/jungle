@@ -1,4 +1,4 @@
-/*reset*/
+/* reset */
 body{margin:0; padding:0}
 h1{margin:0}
 
@@ -8,6 +8,7 @@ header h1{float:left}
 header nav{float:right}
 
 .container{width: 1000px; margin: 0 auto; }
+/* margin: 0 auto; > block을 center로 정렬 */
 .container:after{content:''; display: block; clear: both}
 .container section{float: left; width:700px; height: 500px; background:#c1efff}
 .container aside{float: right; width:300px; height: 500px; background:#bbb}
