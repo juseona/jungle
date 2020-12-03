@@ -6,9 +6,40 @@
     <title>html</title>
 		<style>
 			body, h1{margin:0}
-			
-			.wrap{width:700px; height:400px; background:#ccc}
-
+			/* html, body{height: 100%} */
+			.wrap{
+				width:700px; 
+				height:50vh; 
+				width: 100vw;
+				background:#ccc;
+				padding: 20px;
+			}
+			/* %는 (직속 상위)부모 기준으로 적용 */
+			/* .unit{background: red; height: 50%} */
+			/* .unit{
+				background: red;
+				height: 60vh;
+			} */
+			.box_input{
+				border:1px solid orange;
+				width: 300px;
+				background: #fff;
+				height: 30px;
+			}
+			.box_input > input {
+				height: 30px;
+				width: calc(100% - 100px);
+				vertical-align: middle;
+				border: none;
+				box-sizing: border-box;
+			}
+			.box_input > button {
+				width: 85px;
+				height: 26px;
+				vertical-align: middle;
+				background: transparent;
+				border: none;
+			}
 			
 		</style>
 
@@ -18,7 +49,7 @@
 			<div class="unit">
 				<div class="box_input">
 					<input>
-					<button></button>
+					<button>button</button>
 				</div>
 			</div>
 		</div>

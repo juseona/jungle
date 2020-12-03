@@ -13,6 +13,49 @@
 				color:#fff;
 				padding:20px;
 			}
+			.visual{
+				text-align: center;
+				padding-top: 50px;
+			}
+			.visual .unit .txt_tit{
+				font-size: 50px;
+				color:tomato;
+			}
+			.visual .unit .txt_subs_1{
+				font-size: 25px;
+			}
+			.visual .unit .txt_subs_2{
+				font-size: 20px;
+			}
+			.visual .unit {
+				position: absolute;
+				width: 100%;
+				transform: translateY(100px);
+				opacity: 0;
+			}
+				/* animation: rolling_ani 5s infinite; */
+
+			.visual .unit:nth-child(1){
+				animation: rolling_ani 10s infinite;
+			}
+
+			
+			@keyframes rolling_ani {
+				0%{opacity: 0; transform: translateY(100px);}
+				12%{opacity: 1; transform: translateY(0px);}
+				37%{opacity: 1; transform: translateY(0px);}
+				50%{opacity: 0; transform: translateY(100px);}
+			}
+			.visual .unit:nth-child(2){
+				animation: rolling_ani2 10s infinite;
+				color: teal;
+			}
+			@keyframes rolling_ani2 {
+				50%{opacity: 0; transform: translateY(100px);}
+				62%{opacity: 1; transform: translateY(0px);}
+				87%{opacity: 1; transform: translateY(0px);}
+				100%{opacity: 0; transform: translateY(100px);}
+			}
 		</style>
 
   </head>
@@ -31,6 +74,11 @@
 						<strong class="txt_tit">첫번째 문구</strong>
 						<p class="txt_subs_1">첫번째 문구의 애니메이션 예제 입니다.</p>
 						<p class="txt_subs_2">첫번째 문구의 애니메이션 예제 입니다.</p>
+					</div>
+					<div class="unit">
+						<strong class="txt_tit">두번째 문구</strong>
+						<p class="txt_subs_1">두번째 문구의 애니메이션 예제 입니다.</p>
+						<p class="txt_subs_2">두번째 문구의 애니메이션 예제 입니다.</p>
 					</div>
 				</div>
 				

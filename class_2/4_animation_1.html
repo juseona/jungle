@@ -13,6 +13,73 @@
 				color:#fff;
 				padding:20px;
 			}
+			/* transition 효과 */
+			/* .box{
+				width: 50px;
+				height: 50px;
+				background: red;
+				/* transition: width 1s, height 1s,background-color 1s; */
+				/* transition: all 1s;
+			}
+			.box:hover {
+				width:100px;
+				height: 100px;
+				background:chartreuse;
+				margin-left: 20px;
+			} */ 
+
+			/* animation 효과----------------- */
+			/* .box{
+				width: 50px;
+				height: 50px;
+				background: red;
+				animation: jungle_ani 3s infinite;
+			}
+			@keyframes jungle_ani {
+				0% {width: 50px; height: 50px;}
+				50% {width: 100px; height: 50px; transform: rotate(360deg)}
+				100% {width: 100px; height: 100px;}
+			} */
+
+			/* transform 효과--------------- */
+			/* .box{
+				position: absolute;
+				top: 200px;
+				left: 100px;
+				width: 50px;
+				height: 50px;
+				background: red;
+				/* transform: translate(50px,100px); */
+				/* transform: rotate(45deg); */
+				/* transform: skew(10deg);
+				transition: all 1s;
+			}
+			.box:hover{
+				transform: scale(2) rotate(180deg);
+				
+			} */ 
+			.section {
+				text-align: center;
+				padding-top: 50px;
+				height: 110px;
+				vertical-align: middle;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+				display: inline-block;
+				vertical-align: middle;
+				transition: 0.5s;
+			}
+			.box + .box {
+				margin-left: 50px;
+			}
+			.box:hover {
+				transform: scale(1.5) rotate(30deg);
+				/* transform은 방사형으로 커진다 */
+				background: tomato;
+			}
 		</style>
 
   </head>
@@ -27,7 +94,9 @@
     </div>
 		<div class="container">
 				<div class="section">
-					
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
 				</div>
 				
 		</div>
