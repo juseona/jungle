@@ -1,0 +1,138 @@
+.wrap{
+    border:1px solid #999;
+    width:300px;
+    padding:5px;
+    font-size: 13px;
+    color:#333;
+    box-sizing: border-box;
+}
+
+/* 채팅창 */
+.chat_area{
+    height:350px;
+    background-color: #acc2d2;
+    padding:10px;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* 메세지 */
+.chat_area .item{
+    opacity: 0; /*투명도*/
+    transform: translateX(10px);
+    transition:all 0.3s ease-out;
+}
+.chat_area .item.on{
+    opacity:1;
+    transform:translateX(0px) !important;
+}
+.chat_area .item + .item{
+    margin-top:15px;
+}
+.chat_area .item .box{
+    display: inline-block;
+    max-width: 180px;
+    position: relative;
+}
+.chat_area .item .box:before{
+    content: '';
+    display: block;
+    border-top:0 solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #fff;
+    position: absolute;
+    left:-8px;
+    top:9px;
+}
+.chat_area .item .box .msg{
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+}
+.chat_area .item .box .time{
+    position: absolute;
+    width:70px;
+    right:-75px;
+    bottom:3px;
+    font-size: 11px;
+    color: #999;
+}
+
+/* 나의 메세지 */
+.chat_area .item .box .mymsg{
+    text-align: right;
+    transform: translateX(-10px);
+}
+.chat_area .item .mymsg .box .mymsg{
+    background-color: #fee600;
+}
+.chat_area .item .mymsg .box:before{
+    border-right: 0;
+    border-left:8px solid #fee600;
+    left:auto;
+    right:-8px;
+}
+.chat_area .item .mymsg .box .time{
+    right:auto;
+    left:-75px;
+}
+
+/* 입력창 */
+.input_area{
+    margin-top:5px;
+}
+.input_area input[type="text"]{
+    border:0;
+    background-color: #ddd;
+    width:100%;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius:5px;
+}
+.input_area input[type="text"]:first-child{
+    margin-bottom:5px;
+}
+.input_area input[type="text"]::placeholder{
+    color:#999;
+}
+
+@media all and (max-width:640px){
+    .wrap{
+        width:auto;
+        border:0;
+        font-size: 15px;
+    }
+    html, body, .wrap{height:100%}
+    .chat_area{
+        height:calc(100% - 80px);
+        box-sizing: border-box;
+    }
+    .chat_area .item .box .time{
+        font-size: 13px;
+    }
+    .input_area input[type="text"]{
+        font-size: 15px;
+    }
+}
+
+/* 모바일 구간 */
+@media all and (max-width: 768px){
+    html, body{
+        height: 100%;
+    }
+    .wrap{
+        width: auto;
+        border: none;
+        font-size: 15px;
+        height: 100%
+    }
+    .chat_area{
+        height: calc(100%-95px);
+    }
+    .chat_area .item .box .msg{
+        font-size: 15px;
+    }
+    .input_area input[type="text"]{
+        height:  50px;
+    }
+}
