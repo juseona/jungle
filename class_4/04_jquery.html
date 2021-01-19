@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    
+		<style>
+			.wrap{padding:50px 0;text-align:center;}
+			.wrap .btn{display:inline-block; width:100px; height:100px; line-height:100px; background:#eee;}
+			.wrap .btn.on{
+				background: #666;
+			}
+		</style>
+		<script>
+			$(function(){
+				$(".btn > span").css({
+					"border":"1px solid #000"
+				})
+				$("btm").find("span").css({
+					"font-weight":"bold"
+				})
+				
+				$(".btn").click(function(){
+					alert("클릭");
+				});
+
+				$(".btn").eq(0).addclass("on");
+
+				$(".btn").click(function(){
+					$(".btn").eq(0).addclass("on");
+				});
+			});
+		</script>
+  </head>
+  <body>
+    <div class="wrap">
+			<a href="#" class="btn">
+				<span>btn1</span>
+			</a>
+			<a href="#" class="btn">
+				<span>btn2</span>
+			</a>
+			<a href="#" class="btn">
+				<span>btn3</span>
+			</a>
+			<a href="#" class="btn">
+				<span>btn4</span>
+			</a>
+
+    </div>
+  </body>
+</html>
